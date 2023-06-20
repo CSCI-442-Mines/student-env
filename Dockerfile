@@ -23,3 +23,6 @@ RUN apt-get -y install libboost-dev
 
 # Create the projects directory
 RUN mkdir /root/projects
+
+# Make it so dev container does not exit
+CMD tail -f /dev/null

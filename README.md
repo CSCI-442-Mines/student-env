@@ -8,22 +8,26 @@ Follow the instructions at https://docs.docker.com/engine/install/
 ***Also for Linux users: After installing Docker, you will need to add your user to the Docker group. To do this, run `sudo groupadd docker` and then `sudo usermod -aG docker $USER`. You will need to restart for the changes to apply.***
 
 
-## Step 2 (for VSCode users): Install the "Docker" and "Remote Development" extensions in VSCode
+## Step 2: Install the "Docker" and "Remote Development" extensions in VSCode
 
 The extension names are exactly as is on the extension search page. You can also search by the extension ids to get an extact match:
 1. Remote Development: ms-vscode-remote.vscode-remote-extensionpack
 2. Docker: ms-azuretools.vscode-docker
 
-## Step 4: Pull the CSCI442 docker image
+## Step 3: Pull the CSCI442 docker image and initialize the container
 
 ### Command line:
-- "docker pull minescsci442"
+"docker pull csci442mines" and then "docker run -d --name csci442 lbeuk/csci442mines:latest"
 
-## Steo 5: Run the docker image
+## Step 4: Run the docker image and open in VSCode
 
-TODO
+### Command line:
+"docker start csci442" will start the docker container in the background. You do not need to do this immediately after running the "docker run" command, as the container is already running. You DO need to run this every time your computer or the docker container shut down.
 
-## Step 6: Setting up GitHub
+### Opening in VSCode
+To open the Docker container in VSCode, after starting the container, open up the Docker tab in the left side bar (looks like a whale with boxes on top of it), find the box labeled "lbeuk/csci442mines:latest" (note: it should have a green play button next to it if it is running), right click it, and select "Attach Visual Studio Code". This should open a VSCode window in the Docker container.
+
+## Step 5: Setting up GitHub
 ***Note: If you already have SSH keys set up on github for this device, you may be able to skip this step. VSCode server seems to copy keys over. Attempt step 7, and if it doesn't work, return here.***
 
 Before you can access the course project code, you will first need to set up an ssh key in the docker container.
@@ -39,7 +43,7 @@ Here is an example of an RSA key generated in the docker image:
 
 On a browser, open https://github.com/settings/ssh/new, log in if not already logged in, and paste into the "Key" box the copied key. For a title, name it whatever you want, "OS Docker" as a suggestion.
 
-## Step 7: Pullings your projects
+## Step 6: Pullings your projects
 
 Once you are in the Docker container, you should be able to clone your git projects in here ads you would any other Linux machine.
 
