@@ -38,7 +38,7 @@ Once you have the CSCI 442 docker downloaded you are ready to start using this d
 #### Running a docker image
 You can run any available image using: `docker run <image tag name>`. Here are some useful options:
 - **Running a docker container in the background**. By default a docker container when launched will run in the foreground, meaning you will see all output in the terminal and unable to continue using the terminal. For this reason in most cases it is convenient to run a docker container in the background using the `-d` flag. Example: ```docker run -d csci442mines/student-env```
-- **Assigning a name to you docker container**. Every docker container has a container ID and a container name which can be used to identify and run other commands to manipulate that container. Giving your container a choosen name upon launch it easier to run other commands on this container. Naming your container is done using the `--name` flag in the following format `docker run -name <name> <image name>`. Example: ```docker run --name csci442 csci442mines/student-env```
+- **Assigning a name to you docker container**. Every docker container has a container ID and a container name which can be used to identify and run other commands to manipulate that container. Giving your container a choosen name upon launch it easier to run other commands on this container. Naming your container is done using the `--name` flag in the following format `docker run --name <name> <image name>`. Example: ```docker run --name csci442 csci442mines/student-env```
 - **Creating a bind mount**. Docker containers and your host machine will have separate file systems through which files cannot be shared. If your CSCI442 docker stops running on the computer all files within the docker ***will be erased***. To ensure your work inside the docker is saved it is ***HIGHLY*** recommended that you create a bind mount when launching your OS docker image. A bind mount will link all files within a specified folder on your host machine to a folder in your docker container. This essentially creates a shared file space between you docker and host machine. You can create a bind mount using the `--mount flag` with the format: ` docker run --mount type=bind,source=<path to folder on host>,target=<path to folder in container>`. Example: ```docker run --mount type=bind,source=C:\Users\ccrippey\os_ws,target=/root/projects csci442mines/student-env```
 - **Running with an interactive terminal**. When launching a docker container, sometimes you will want to interact will files and programs inside that container from the terminal. To launch an interactive terminal with access to the inside of the docker container, use flags `-it` when running your container. Example: ```docker run -it csci442mines/student-env```. See next section for more on interactive terminals.
 - **Auto removing the docker container**. By default when a docker container is killed, some artifacts of that container will remain in your computer system. TO automatically remove this artifacts upon killing a container use the `--rm` flag. Example: ```docker run --rm csci442mines/student-env```. See next section for more information on removing docker containers.
@@ -108,8 +108,9 @@ To remove these old container use either:
     root@73ed9164ced7:~/projects# ls
     f23-project-1-<username>
     ```
-8. 
-9. 
+8. Edit and run project code inside the docker container. Files will automatically be saved back to your CSCI 442 workspace folder on your host machine.
+
+
 
 ## Using Visual Studio Code
 If you prefer a graphical IDE, [VSCode](https://code.visualstudio.com/) has excellent support for Docker. 
