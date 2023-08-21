@@ -18,7 +18,7 @@ We are using docker to allow you to setup an isolated Linux environment with all
 First download and setup Docker Engine using the instructions at the link below for your OS:
 - Windows: https://docs.docker.com/desktop/install/windows-install/
 - Mac: https://docs.docker.com/desktop/install/mac-install/
-- Linux: https://docs.docker.com/desktop/install/linux-install/
+- Linux: https://docs.docker.com/engine/install/
 
 Open a new terminal on your computer and verify that your docker installation is working by running the following command:
 ```
