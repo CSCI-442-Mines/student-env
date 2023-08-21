@@ -51,14 +51,17 @@ CONTAINER ID   IMAGE                      COMMAND                  CREATED      
 
 #### Enter the docker container from the terminal
 After running your docker image, you might be wondering how we can see files and execute commands inside the docker. You can enter a docker container from the terminal using either:
-- `docker exec -it <container ID> bash`
-- `docker exec -it <container name> bash`
+- `docker exec -it <container ID> bash`. Example: `docker exec -it 827b bash`
+- `docker exec -it <container name> bash`. Example: `docker exec -it csci442-docker bash
+
 If you are unsure of the container name or container ID you can find these using `docker ps`.
-Examples:
+
+After running this command you should see the following in your terminal.
 ```
-$ docker exec -it 827b bash
-$ docker exec -it csci442-docker bash
+C:\Windows\System32>docker exec -it csci442-docker bash
+root@827db10a6ab4:/#
 ```
+This prompt is now inside your docker container. You can see the container ID (in this case 827db10...) in the terminal prompt. To see files inside the container, navigate the container, or run command and programs inside the container you can interact with this terminal like you would a normal linux system.
 
 
 ## Using Visual Studio Code
