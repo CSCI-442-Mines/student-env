@@ -84,18 +84,32 @@ To remove these old container use either:
 - `docker rm <container ID>`. Example: `docker rm 827b`
 - `docker rm <container name>`. Example: `docker rm csci442-docker`
 
-### Recommend setup for OS environment
+### Recommended setup for OS environment
 1. Follow these instruction to generate an ssh key for you github: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 2. Create an CSCI 442 workspace folder on your host machine.
 3. Navigate to you CSCI 442 workspace, inside this workspace folder clone the project repositoriy from github.
     ```
-    C:\Users\USER\csci442_ws>git clone git@github.com:CSCI-442-Mines/project-1-starter.git
+    C:\Users\USER\csci442_ws>git clone git@github.com:CSCI-442-Mines/f23-project-1-<username>.git
     ```
 4. Run the csci442 docker image in the background and create a mount your CSCI 442 workspace on your computer
     ```
-    docker run -d --rm --name csci442-env --mount type=bind,source="C:\Users\carob\csci442_ws",target=/root/projects csci442mines/student-env
+    docker run -d --rm --name csci442-env --mount type=bind,source=<path to csci442 workspace folder>,target=/root/projects csci442mines/student-env
     ```
 5. Enter the csci442 docker container
+    ```
+    docker exec -it csci442-env bash
+    ```
+6. Inside the docker container navigate to the `/root/projects` folder
+    ```
+    root@73ed9164ced7:/# cd /root/projects
+    ```
+7. Verify that your project repository is the the folder
+    ```
+    root@73ed9164ced7:~/projects# ls
+    f23-project-1-<username>
+    ```
+8. 
+9. 
 
 ## Using Visual Studio Code
 If you prefer a graphical IDE, [VSCode](https://code.visualstudio.com/) has excellent support for Docker. 
