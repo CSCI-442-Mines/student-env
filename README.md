@@ -40,7 +40,10 @@ You can run any available image using: `docker run <image tag name>`. Here are s
 - **Running a docker container in the background**. By default a docker container when launched will run in the foreground, meaning you will see all output in the terminal and unable to continue using the terminal. For this reason in most cases it is convenient to run a docker container in the background using the `-d` flag. Example: ```docker run -d csci442mines/student-env```
 - **Assigning a name to you docker container**. Every docker container has a container ID and a container name which can be used to identify and run other commands to manipulate that container. Giving your container a choosen name upon launch it easier to run other commands on this container. Naming your container is done using the `-name` flag in the following format `docker run -name <name> <image name>`. Example: ```docker run -name csci442 csci442mines/student-env```
 - **Creating a bind mount**. Docker containers and your host machine will have separate file systems through which files cannot be shared. If your CSCI442 docker stops running on the computer all files within the docker ***will be erased***. To ensure your work inside the docker is saved it is ***HIGHLY*** recommended that you create a bind mount when launching your OS docker image. A bind mount will link all files within a specified folder on your host machine to a folder in your docker container. This essentially creates a shared file space between you docker and host machine. You can create a bind mount using the `--mount flag` with the format: ` docker run --mount type=bind,source=<path to folder on host>,target=<path to folder in container>`. Example: ```docker run --mount type=bind,source=C:\Users\ccrippey\os_ws,target=/root/projects csci442mines/student-env```
-- **Running with an interactive terminal**. When launching a docker container, sometimes you will want to interact will files and programs inside that container from the terminal. To launch an interactive terminal with access to the inside of the docker container, use flags `-it` when running your container. Example: ```docker run -it csci442mines/student-env```
+- **Running with an interactive terminal**. When launching a docker container, sometimes you will want to interact will files and programs inside that container from the terminal. To launch an interactive terminal with access to the inside of the docker container, use flags `-it` when running your container. Example: ```docker run -it csci442mines/student-env```. See next section for more on interactive terminals.
+- **Auto removing the docker container**. By default when a docker container is killed, some artifacts of that container will remain in your computer system. TO automatically remove this artifacts upon killing a container use the `-rm` flag. Example: ```docker run -rm csci442mines/student-env```. See next section for more information on removing docker containers.
+
+Multiple flags can be used to achieve multiple affects.
 
 #### Checking if your docker image is running
 Once you have run your docker image, you can check whether it is running using `docker ps` in your terminal. The output lists container the container ID, image tag, and other information of the running docker containers.
@@ -67,9 +70,20 @@ This prompt is now inside your docker container. You can see the container ID (i
 #### Stopping a docker container
 To stop a running docker container use either:
 - `docker kill <container ID>`. Example: `docker kill 827b`
-- `docker <container name>`. Example: `docker kill csci442-docker`
+- `docker kill <container name>`. Example: `docker kill csci442-docker`
 
 **VERY IMPORTANT**: The state inside a docker container ***will be LOST*** after killing the container. All files in the container which are not in a mounted folder ***will be LOST*** once a container is killed. To prevent loosing your files, store all files in a folder which is associated with a bind mount.
+
+#### Removing containers
+After killing a container, artifacts of this container will remain on your system using up disk space. To see old exited containers use `docker ps -a`. You output should look like this:
+```
+CONTAINER ID   IMAGE                      COMMAND                   CREATED             STATUS                         PORTS     NAMES
+827db10a6ab4   csci442mines/student-env   "/bin/sh -c 'tail -f…"    29 minutes ago      Exited (137) 5 seconds ago               csci442-docker
+```
+To remove these old container use either:
+- `docker rm <container ID>`. Example: `docker rm 827b`
+- `docker rm <container name>`. Example: `docker rm csci442-docker`
+
 
 
 ## Using Visual Studio Code
