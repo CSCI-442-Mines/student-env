@@ -37,8 +37,8 @@ Once you have the CSCI 442 docker downloaded you are ready to start using this d
 
 #### Running a docker image
 You can run any available image using: `docker run <image tag name>`. Here are some useful options:
-- Running a docker container in the background. By default a docker container when launched will run in the foreground, meaning you will see all output in the terminal and unable to continue using the terminal. For this reason in most cases it is convenient to run a docker container in the background using the `-d` flag. Example: ```docker run -d csci442mines/student-env```
-- 
+- ***Running a docker container in the background***. By default a docker container when launched will run in the foreground, meaning you will see all output in the terminal and unable to continue using the terminal. For this reason in most cases it is convenient to run a docker container in the background using the `-d` flag. Example: ```docker run -d csci442mines/student-env```
+- ***Assigning a name to you docker container***. Every docker container has a container ID and a container name which can be used to identify and run other commands to manipulate that container. Giving your container a choosen name upon launch it easier to run other commands on this container. Naming your container is done using the `-name` flag in the following format `docker run -name <name> <image name>`. Example: ```docker run -name csci442 csci442mines/student-env```
 
 
 ## Using Visual Studio Code
