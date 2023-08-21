@@ -1,6 +1,23 @@
 # CSCI442 Student Environment
 Student environment for CSCI442 programming projects
 ## Basic Docker Setup
+### Download Docker Engine
+First download and setup Docker Engine using the instructions at the link below for you OS:
+- Windows:https://docs.docker.com/desktop/install/windows-install/
+- Mac: https://docs.docker.com/desktop/install/mac-install/
+- Linux: https://docs.docker.com/desktop/install/linux-install/
+
+Open a new terminal on your computer and verify that your docker installation is working by running the following command:
+```
+docker run hello-world
+```
+If you docker installtion is working you should get the following output:
+```
+Hello from Docker.
+This message shows that your installation appears to be working correctly.
+...
+```
+
 ## Using Visual Studio Code
 If you prefer a graphical IDE, [VSCode](https://code.visualstudio.com/) has excellent support for Docker. 
 
