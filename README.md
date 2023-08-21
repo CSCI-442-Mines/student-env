@@ -31,7 +31,7 @@ This message shows that your installation appears to be working correctly.
 ...
 ```
 
-### Downloading up the CSCI 442 docker
+### Pulling the CSCI 442 docker
 You will need to download the CSCI 442 docker image from the Docker Hub. To do this open your terminal and run:
 ```
 $ docker pull csci442mines/student-env
