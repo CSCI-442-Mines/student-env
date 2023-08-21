@@ -46,10 +46,19 @@ Once you have run your docker image, you can check whether it is running using `
 After running the CSCI 442 docker you should see the following output:
 ```
 CONTAINER ID   IMAGE                      COMMAND                  CREATED         STATUS         PORTS     NAMES
-4552d2d6f583   csci442mines/student-env   "/bin/sh -c 'tail -f…"   3 seconds ago   Up 2 seconds             compassionate_mccarthy
+827db10a6ab4   csci442mines/student-env   "/bin/sh -c 'tail -f…"   3 seconds ago   Up 2 seconds             csci442-docker
 ```
 
-
+#### Enter the docker container from the terminal
+After running your docker image, you might be wondering how we can see files and execute commands inside the docker. You can enter a docker container from the terminal using either:
+- `docker exec -it <container ID> bash`
+- `docker exec -it <container name> bash`
+If you are unsure of the container name or container ID you can find these using `docker ps`.
+Examples:
+```
+$ docker exec -it 827b bash
+$ docker exec -it csci442-docker bash
+```
 
 
 ## Using Visual Studio Code
