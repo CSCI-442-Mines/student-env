@@ -97,7 +97,7 @@ To remove these old container use either:
 - `docker rm <container ID>`. Example: `docker rm 827b`
 - `docker rm <container name>`. Example: `docker rm csci442-env`
 
-### Recommended setup for OS environment
+### Recommended setup for CSCI 442 environment
 1. Follow these instruction to generate an ssh key for you github on your host machine: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 2. Create an CSCI 442 workspace folder on your host machine.
 3. Navigate to you CSCI 442 workspace, inside this workspace folder clone the project repositoriy from github.
