@@ -9,7 +9,7 @@ First download and setup Docker Engine using the instructions at the link below 
 
 Open a new terminal on your computer and verify that your docker installation is working by running the following command:
 ```
-docker run hello-world
+$ docker run hello-world
 ```
 If you docker installtion is working you should get the following output:
 ```
@@ -18,22 +18,27 @@ This message shows that your installation appears to be working correctly.
 ...
 ```
 
-### Setting up the CSCI 442 docker
+### Downloading up the CSCI 442 docker
 You will need to download the os docker image from the Docker Hub. To do this open your terminal and run:
 ```
-docker pull csci442mines/student-env
+$ docker pull csci442mines/student-env
 ```
 You should now have the docker image on your computer. To verify you can run the following command to see all available images on your machine:
 ```
-docker images
+$ docker images
 ```
-In the output of this command should be listed:
+In the output of this command should be listed the CSCI 442 docker image:
 ```
 REPOSITORY                 TAG       IMAGE ID       CREATED        SIZE
 csci442mines/student-env   latest    84f85651e5f1   20 hours ago   1.71GB
 ```
+### Basic docker commands
+Once you have the CSCI 442 docker downloaded you are ready to start using this docker.####
 
-###
+#### Running a docker image
+You can run any available image using: `docker run <image tag name>`. Here are some useful options:
+- Running a docker container in the background. By default a docker container when launched will run in the foreground, meaning you will see all output in the terminal and unable to continue using the terminal. For this reason in most cases it is convenient to run a docker container in the background using the `-d` flag. Example: ```docker run -d csci442mines/student-env```
+- 
 
 
 ## Using Visual Studio Code
