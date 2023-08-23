@@ -127,9 +127,9 @@ To remove these old container use either:
 8. Edit and run project code inside the docker container. Files will automatically be saved back to your CSCI 442 workspace folder on your host machine.
 
 ### HOW TO AVOID LOSING YOUR WORK
-- ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `Any files, including your projects, modified within a Docker image is volatile  (i.e., will go away after you stop the Docker container), UNLESS you use a properly configured "bind mount". Before you begin the implementation, please make sure the files in your home folder are not lost by testing whether the bind works properly.'
+- ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `Any files, including your projects, modified within a Docker image is volatile  (i.e., will go away after you stop the Docker container), UNLESS you use a properly configured "bind mount". Before you begin the implementation, please make sure the files in your home folder are not lost by testing whether the bind works properly.`
 
-- ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `As a second safety net, please use "git push" and "git commit" commands together, at the end of each programming session and more preferably periodically while you are coding.'
+- ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `As a second safety net, please use "git push" and "git commit" commands together, at the end of each programming session and more preferably periodically while you are coding.`
 
 ## Using Visual Studio Code
 If you prefer a graphical IDE, [VSCode](https://code.visualstudio.com/) has excellent support for Docker. 
