@@ -88,7 +88,8 @@ To stop a running docker container use either:
 - `docker kill <container ID>`. Example: `docker kill 827b`
 - `docker kill <container name>`. Example: `docker kill csci442-env`
 
-![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `**VERY IMPORTANT**: The state inside a docker container ***will be LOST*** after killing the container. All files in the container which are not in a mounted folder ***will be LOST*** once a container is killed. To prevent losing your files, store all files in a folder which is associated with a bind mount.`
+**VERY IMPORTANT**: 
+ The state inside a docker container ***will be LOST*** after killing the container. All files in the container which are not in a mounted folder ***will be LOST*** once a container is killed. To prevent losing your files, store all files in a folder which is associated with a bind mount.
 
 #### Removing containers
 After killing a container, artifacts of this container will remain on your system using up disk space. To see old exited containers use `docker ps -a`. You output should look like this:
@@ -127,7 +128,8 @@ To remove these old container use either:
 8. Edit and run project code inside the docker container. Files will automatically be saved back to your CSCI 442 workspace folder on your host machine.
 
 ### HOW TO AVOID LOSING YOUR WORK
-- ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `Any file, including your project files, modified within a Docker image is volatile  (i.e., will go away after you stop the Docker container), UNLESS you use a properly configured "bind mount". Before you begin the project implementation, please make sure the files in your home folder are not lost by testing whether the bind works properly.`
+
+- ![#f03c15](https://placehold.it/150/f03c15/ffffff?text=WARNING) `Any file, including your project files, modified within a Docker image is volatile  (i.e., will go away after you stop the Docker container), UNLESS you use a properly configured "bind mount". Before you begin the project implementation, please make sure the files in your home folder are not lost by testing whether the bind works properly.`
 
 - ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `As a second safety net, please use "git push" and "git commit" commands together, at the end of each programming session and more preferably periodically while you are coding.`
 
