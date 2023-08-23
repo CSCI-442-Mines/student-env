@@ -129,9 +129,9 @@ To remove these old container use either:
 
 ### HOW TO AVOID LOSING YOUR WORK
 
-- ![#f03c15](https://placehold.it/15x150/f03c15/ffffff?text=WARNING) `Any file, including your project files, modified within a Docker image is volatile  (i.e., will go away after you stop the Docker container), UNLESS you use a properly configured "bind mount". Before you begin the project implementation, please make sure the files in your home folder are not lost by testing whether the bind works properly.`
+- ![#f03c15]([https://placehold.it/15x150/f03c15/ffffff?text=WARNING](https://via.placeholder.com/80x15/f03c15/ffffff?text=WARNING)) `Any file, including your project files, modified within a Docker image is volatile  (i.e., will go away after you stop the Docker container), UNLESS you use a properly configured "bind mount". Before you begin the project implementation, please make sure the files in your home folder are not lost by testing whether the bind works properly.`
 
-- ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `As a second safety net, please use "git push" and "git commit" commands together, at the end of each programming session and more preferably periodically while you are coding.`
+- ![#f03c15]([https://placehold.co/15x15/f03c15/f03c15.png](https://via.placeholder.com/80x15/f03c15/ffffff?text=WARNING)) `As a second safety net, please use "git push" and "git commit" commands together, at the end of each programming session and more preferably periodically while you are coding.`
 
 ## Using Visual Studio Code
 If you prefer a graphical IDE, [VSCode](https://code.visualstudio.com/) has excellent support for Docker. 
