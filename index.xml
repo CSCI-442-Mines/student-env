@@ -10,43 +10,43 @@
     <link>https://csci-442-mines.github.io/student-env//</link>
     <guid>https://csci-442-mines.github.io/student-env//</guid>
     <description>What is Docker § Docker is a tool that allows developers to easily deploy their applications in a sandbox (called containers) to run on the host operating system.</description>
-    <pubDate>Thu, 24 Aug 2023 13:00:10 GMT</pubDate>
+    <pubDate>Thu, 24 Aug 2023 02:55:46 GMT</pubDate>
   </item><item>
     <title>Setting Up The Docker Container</title>
     <link>https://csci-442-mines.github.io/student-env//guides/Setting-Up-The-Docker-Container</link>
     <guid>https://csci-442-mines.github.io/student-env//guides/Setting-Up-The-Docker-Container</guid>
     <description>Create your directory to store your projects in § We recommend creating a directory on your computer called OS_Projects, in which your projects will be synced with your Docker container.</description>
-    <pubDate>Thu, 24 Aug 2023 05:20:30 GMT</pubDate>
+    <pubDate>Thu, 24 Aug 2023 18:26:08 GMT</pubDate>
   </item><item>
     <title>Setting Up Your Projects Inside the Docker Container</title>
     <link>https://csci-442-mines.github.io/student-env//guides/Setting-Up-Your-Projects-Inside-the-Docker-Container</link>
     <guid>https://csci-442-mines.github.io/student-env//guides/Setting-Up-Your-Projects-Inside-the-Docker-Container</guid>
     <description>Before following this guide, you need access to your Docker container’s terminal in order to run these commands. The reference guide, Opening a Docker Container’s Terminal will help with this.</description>
-    <pubDate>Thu, 24 Aug 2023 04:39:57 GMT</pubDate>
+    <pubDate>Thu, 24 Aug 2023 03:50:52 GMT</pubDate>
   </item><item>
     <title>Additional Docker-foo</title>
     <link>https://csci-442-mines.github.io/student-env//references/Additional-Docker-foo</link>
     <guid>https://csci-442-mines.github.io/student-env//references/Additional-Docker-foo</guid>
     <description>Checking if your docker container is running § Once you have run your docker image, you can check whether it is running using docker ps in your terminal.</description>
-    <pubDate>Thu, 24 Aug 2023 13:19:57 GMT</pubDate>
+    <pubDate>Thu, 24 Aug 2023 05:11:04 GMT</pubDate>
   </item><item>
     <title>Avoiding Data Loss and Other Important Notes</title>
     <link>https://csci-442-mines.github.io/student-env//references/Avoiding-Data-Loss-and-Other-Important-Notes</link>
     <guid>https://csci-442-mines.github.io/student-env//references/Avoiding-Data-Loss-and-Other-Important-Notes</guid>
     <description>Graceful Exit § While your changes will most likely be saved to disk, it is never good to risk an abrupt shutdown of anything when avoidable. There may be some process that is accessing a file, and an abrupt shutdown may corrupt that file (and your work).</description>
-    <pubDate>Thu, 24 Aug 2023 04:49:40 GMT</pubDate>
+    <pubDate>Thu, 24 Aug 2023 03:50:52 GMT</pubDate>
   </item><item>
     <title>Opening a Docker Container's Terminal</title>
     <link>https://csci-442-mines.github.io/student-env//references/Opening-a-Docker-Container's-Terminal</link>
     <guid>https://csci-442-mines.github.io/student-env//references/Opening-a-Docker-Container's-Terminal</guid>
     <description>VSCode Terminal § Follow the instructions under Setup. On the top header bar, click Terminal &gt; New Terminal. What is shown on my computer as Ctrl+Shift+` is the keyboard shortcut I can use to create a new terminal.</description>
-    <pubDate>Thu, 24 Aug 2023 04:23:40 GMT</pubDate>
+    <pubDate>Thu, 24 Aug 2023 04:06:05 GMT</pubDate>
   </item><item>
     <title>Using Visual Studio Code</title>
     <link>https://csci-442-mines.github.io/student-env//references/Using-Visual-Studio-Code</link>
     <guid>https://csci-442-mines.github.io/student-env//references/Using-Visual-Studio-Code</guid>
     <description>If you prefer a graphical IDE, VSCode has excellent support for Docker. Setup § Prerequisites § You’ve followed the first step for setup, Setting Up The Docker Container.</description>
-    <pubDate>Thu, 24 Aug 2023 04:09:08 GMT</pubDate>
+    <pubDate>Thu, 24 Aug 2023 02:55:46 GMT</pubDate>
   </item>
     </channel>
   </rss>
