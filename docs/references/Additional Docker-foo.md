@@ -36,3 +36,5 @@ To remove these old container use either:
 - `docker rm <container ID>`. Example: `docker rm 827b`
 - `docker rm <container name>`. Example: `docker rm csci442-env`
 
+We do not recommend removing your docker container until after the semester is over, as that will result in data loss. See [[Avoiding Data Loss and Other Important Notes#Do not delete your Docker container!!!!!]].
+
