@@ -1,3 +1,7 @@
+---
+title: CSCI 442 student environment
+---
+
 ### What is Docker
 
 Docker is a tool that allows developers to easily deploy their applications in a sandbox (called containers) to run on the host operating system. The key benefit of Docker is that it allows users to package an application with all of its dependencies into a standardized unit for software development. Unlike virtual machines, containers do not have high overhead and hence enable more efficient usage of the underlying system and resources.

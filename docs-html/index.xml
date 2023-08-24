@@ -19,12 +19,6 @@
     <description> Open a terminal, either in vscode (see: Using Visual Studio Code), or by running docker exec -it operating_systems bash. All commands in this part of the guide will use the terminal inside the container.</description>
     <pubDate>Wed, 23 Aug 2023 23:48:04 GMT</pubDate>
   </items><items>
-    <title>CSCI442 Student Environment</title>
-    <link>https://quartz.jzhao.xyz/CSCI442-Student-Environment</link>
-    <guid>https://quartz.jzhao.xyz/CSCI442-Student-Environment</guid>
-    <description>What is Docker § Docker is a tool that allows developers to easily deploy their applications in a sandbox (called containers) to run on the host operating system.</description>
-    <pubDate>Wed, 23 Aug 2023 23:48:04 GMT</pubDate>
-  </items><items>
     <title>Setting Up The Docker Container</title>
     <link>https://quartz.jzhao.xyz/Setting-Up-The-Docker-Container</link>
     <guid>https://quartz.jzhao.xyz/Setting-Up-The-Docker-Container</guid>
@@ -36,6 +30,12 @@
     <guid>https://quartz.jzhao.xyz/Using-Visual-Studio-Code</guid>
     <description>If you prefer a graphical IDE, VSCode has excellent support for Docker. Prerequisites § You’ve followed the basic docker setup tutorial described above You’ve installed VSCode You’ve installed the “Remote Development” and “Docker” extensions within VSCode Connecting to Your Container § Navigate to the Docker menu (A whale with cubes on the left side of the window) Find csci442mines/student-env in the “Individual Containers” list.</description>
     <pubDate>Wed, 23 Aug 2023 23:51:12 GMT</pubDate>
+  </items><items>
+    <title>CSCI 442 student environment</title>
+    <link>https://quartz.jzhao.xyz/</link>
+    <guid>https://quartz.jzhao.xyz/</guid>
+    <description>What is Docker § Docker is a tool that allows developers to easily deploy their applications in a sandbox (called containers) to run on the host operating system.</description>
+    <pubDate>Thu, 24 Aug 2023 00:42:53 GMT</pubDate>
   </items><items>
     <title>debugger_controls.png</title>
     <link>https://quartz.jzhao.xyz/images/debugger_controls.png</link>

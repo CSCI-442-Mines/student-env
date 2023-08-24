@@ -1,5 +1,6 @@
 render:
 	rm -rf temp
+	rm -r docs-html/*
 	mkdir temp
 # Sets up quartz
 	cd temp; git clone https://github.com/jackyzha0/quartz.git; cd quartz; npm i
