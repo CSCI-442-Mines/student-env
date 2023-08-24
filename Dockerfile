@@ -5,6 +5,7 @@ LABEL maintainer="lbeuk@pm.me"
 RUN apt-get update && apt-get install -y \
     openssh-client \
     git \
+    zip \
     build-essential \
     clang \
     gdb \
