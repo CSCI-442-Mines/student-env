@@ -60,8 +60,8 @@ $ docker run -d --name operating_systems  --mount type=bind,source=<local sync p
 
 If you followed our guidance on the location for your local sync path, it should look like this for Windows (this is where the folder is automatically created):
 ```
-$ cd $home
-$ docker run -d --name operating_systems  --mount type=bind,source="$(pwd)\OS_projects",target=/root/projects csci442mines/student-env
+$ cd %HomePath%
+$ docker run -d --name operating_systems  --mount type=bind,source="%cd%\OS_projects",target=/root/projects csci442mines/student-env
 ```
 
 Or like this for MacOS/Linux:
