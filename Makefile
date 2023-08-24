@@ -17,3 +17,4 @@ render:
 # Cleans up
 	rm -rf docs-html
 	rm -rf temp
+	rm -rf quartz
