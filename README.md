@@ -1,5 +1,8 @@
 # CSCI442 Student Environment
 Student environment for CSCI442 programming projects
+
+This is an old document. Please [click here](/docs-html).
+
 ## Basic Docker Setup
 ### What is Docker
 
