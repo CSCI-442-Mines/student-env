@@ -51,6 +51,13 @@ The command you will run in is as follows:
 $ docker run -d --name operating_systems  --mount type=bind,source=<path to where you want to store csci442 files on your local computer>,target=/root/projects csci442mines/student-env
 ```
 
+TODO: The command you will run in Windows is as follows:
+```
+$ cd $home
+$ docker run -d --name operating_systems  --mount type=bind,source="$(pwd)\OS_projects",target=/root/projects csci442mines/student-env
+```
+TODO: This command will create a folder under "C:\Users\<your name>\OS_projects" 
+
 TODO: You will use "docker run" command only once in the entire semester, unless you delete the container.
 
 To break down the command:
@@ -70,6 +77,8 @@ Instead, we will just restart the Docker container we initially created when we 
 ```
 $ docker start operating_systems
 ```
+
+TODO: The command above does not launch a command prompt on the container. I think we should repeat the instructions given under "Enter the docker container from the terminal" section in the docker-foo, here as well. 
 
 Alternatively, in the Docker tab in vscode, you can also just right click the container, and click "Start". 
 
