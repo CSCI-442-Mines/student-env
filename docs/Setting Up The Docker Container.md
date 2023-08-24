@@ -7,6 +7,9 @@ First download and setup Docker Engine using the instructions at the link below 
     - Remember to follow the post-installation steps for Linux: https://docs.docker.com/engine/install/linux-postinstall/
     - For Linux specific issues with Docker, feel free to email TA Luke Beukelman (lukebeukelman@mines.edu).
 
+
+TODO: Explain how to open a terminal for windows /linux mac.
+
 Open a new terminal on your computer and verify that your docker installation is working by running the following command:
 ```
 $ docker run hello-world
@@ -41,15 +44,21 @@ Now that you have the Docker image pulled, you can now create the container that
 
 The [docker run](https://docs.docker.com/engine/reference/commandline/run/) family of commands helps in the creation of creating docker containers. Most of the initial settings for the docker container are set in this step, and can not be changed afterwards.
 
+TODO: below, create two or three version (Windows/linux/mac). Replace the "source" value below with a folder named OS_projects. To be consistent we could also use OS_projects in the mapped folder insde container.
+
 The command you will run in is as follows:
 ```
 $ docker run -d --name operating_systems  --mount type=bind,source=<path to where you want to store csci442 files on your local computer>,target=/root/projects csci442mines/student-env
 ```
 
+TODO: You will use "docker run" command only once in the entire semester, unless you delete the container.
+
 To break down the command:
 * `docker run` is the command and sub-command to run a new docker image.
-*  `-d` runs the container in detached mode, as opposed to running it in the foreground, making it so your terminal will not wait for the docker container to shut down.
+*  `-d` runs the container in detached mode, as opposed to running it in the foreground, making it so your terminal will not wait for the docker container to shut down. TODO: What happens when their battery runs out?
 * `--mount type=bind,source=<path to where you want to store csci442 files on your local computer>,target=/root/projects` creates a bind mount, which makes it so that the changes in your Docker container are preserved on your computer, outside of the container. This makes it harder to lose your work!
+    * TODO: on your local computer the project files will be sync'ed into a folder named "OS_projects" under your home directory.
+    * TODO: Inside the container your project files will be under /root/projects
 * `csci442mines/student-env` is the name of the image that you are creating a container from.
 
 **We do not recommend deleting your Docker container.  This will delete everything inside of it, except for what is saved in the bind mount. However, if you accidentally do, follow this part of the guide again.**
