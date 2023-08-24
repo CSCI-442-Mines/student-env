@@ -24,3 +24,5 @@ TODO:  *** Per-project set up***
 3. Run the binary that is specific to the project. E.g. for project 1 it is "./reverse"
 4. Implement the project via your favorite editor
 5.  use "git push & git commit -a" commands together, at the end of each programming session and more preferably periodically while you are coding.
+
+TODO: Taker the screenshot here
