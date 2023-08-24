@@ -1,11 +1,13 @@
 ### Create your directory to store your projects in
 We recommend creating a directory on your computer called `OS_Projects`, in which your projects will be synced with your Docker container. We recommend you place the folder in the following paths, depending on your operating system, for consistency.
-* Windows:  under `Documents`, or `C:\Users\<username>\Documents\OS_Projects\`.
+* Windows: will be set up automatically in a later step.
 * MacOS and Linux: under your home directory: `/home/<username>/OS_Projects`.
 
 ### Download Docker
+For Windows and Mac, you will download Docker Desktop. For Linux, you will download Docker Engine. This is for historical reasons regarding the workarounds that were needed to port Docker to Mac and Windows.
+
 First download and setup Docker Engine using the instructions at the link below for your OS:
-- Windows: https://docs.docker.com/desktop/install/windows-install/   TODO: there is no "Engine". All I can see desktop
+- Windows: https://docs.docker.com/desktop/install/windows-install/
 - Mac: https://docs.docker.com/desktop/install/mac-install/
 - Linux: https://docs.docker.com/engine/install/
     - Note: DO NOT install Docker Desktop for Linux, rather, select your Linux distribution on the left sidebar and follow the distribution specific instructions for Docker engine. Docker Desktop runs with a different environment in Linux, and we may not be able to support it.
@@ -56,9 +58,10 @@ The command you will run in is as follows:
 $ docker run -d --name operating_systems  --mount type=bind,source=<local sync path>,target=/root/projects csci442mines/student-env
 ```
 
-If you followed our guidance on the location for your local sync path, it should look like this for Windows:
+If you followed our guidance on the location for your local sync path, it should look like this for Windows (this is where the folder is automatically created):
 ```
-$ docker run -d --name operating_systems  --mount type=bind,source=C:\Users\<username>\Documents\OS_Projects\,target=/root/projects csci442mines/student-env
+$ cd $home
+$ docker run -d --name operating_systems  --mount type=bind,source="$(pwd)\OS_projects",target=/root/projects csci442mines/student-env
 ```
 
 Or like this for MacOS/Linux:
@@ -89,7 +92,7 @@ Instead, we will just restart the Docker container we initially created when we 
 $ docker start operating_systems
 ```
 
-TODO: The command above does not launch a command prompt on the container. I think we should repeat the instructions given under "Enter the docker container from the terminal" section in the docker-foo, here as well. 
+This command only runs the Docker container in the background. To access the container, you will either want to open it in VSCode ([[Using Visual Studio Code]]), or in a terminal ([[Opening a Docker Container's Terminal]]).
 
 Alternatively, in the Docker tab in vscode, you can also just right click the container, and click "Start". 
 
