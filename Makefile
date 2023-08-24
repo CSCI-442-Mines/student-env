@@ -5,6 +5,7 @@ render:
 	rm -rf website-branch
 # Sets up quartz
 	git clone https://github.com/jackyzha0/quartz.git; cd quartz; npm i
+	cp quartz.config.ts quartz/quartz.config.ts
 # Builds site
 	mkdir docs-html
 	cd quartz; npx quartz build -d ../docs/ -o ../docs-html
