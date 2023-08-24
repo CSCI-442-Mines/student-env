@@ -5,7 +5,7 @@ We recommend creating a directory on your computer called `OS_Projects`, in whic
 
 ### Download Docker
 First download and setup Docker Engine using the instructions at the link below for your OS:
-- Windows: https://docs.docker.com/desktop/install/windows-install/
+- Windows: https://docs.docker.com/desktop/install/windows-install/   TODO: there is no "Engine". All I can see desktop
 - Mac: https://docs.docker.com/desktop/install/mac-install/
 - Linux: https://docs.docker.com/engine/install/
     - Note: DO NOT install Docker Desktop for Linux, rather, select your Linux distribution on the left sidebar and follow the distribution specific instructions for Docker engine. Docker Desktop runs with a different environment in Linux, and we may not be able to support it.
@@ -88,6 +88,8 @@ Instead, we will just restart the Docker container we initially created when we 
 ```
 $ docker start operating_systems
 ```
+
+TODO: The command above does not launch a command prompt on the container. I think we should repeat the instructions given under "Enter the docker container from the terminal" section in the docker-foo, here as well. 
 
 Alternatively, in the Docker tab in vscode, you can also just right click the container, and click "Start". 
 

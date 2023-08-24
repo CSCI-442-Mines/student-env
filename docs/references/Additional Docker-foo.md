@@ -7,9 +7,8 @@ CONTAINER ID   IMAGE                      COMMAND                  CREATED      
 ```
 
 ### Enter the docker container from the terminal
-After running your docker image, you might be wondering how we can see files and execute commands inside the docker. You can enter a docker container from the terminal using either:
-- `docker exec -it <container ID> bash`. Example: `docker exec -it 827b bash`
-- `docker exec -it <container name> bash`. Example: `docker exec -it csci442-env bash`
+After running your docker image, you might be wondering how we can see files and execute commands inside the docker. You can enter a docker container from the terminal using :
+- `docker exec -it <container name> bash`. Example: `docker exec -it operating_systems bash`
 
 If you are unsure of the container name or container ID you can find these using `docker ps`.
 
