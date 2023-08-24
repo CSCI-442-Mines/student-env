@@ -11,6 +11,7 @@ const config: QuartzConfig = {
     },
     baseUrl: "csci-442-mines.github.io/student-env/",
     ignorePatterns: ["private", "templates"],
+    defaultDateType: "created",
     theme: {
       typography: {
         header: "Schibsted Grotesk",
