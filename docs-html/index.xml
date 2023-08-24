@@ -1,0 +1,46 @@
+<rss xmlns:atom="http://www.w3.org/2005/atom" version="2.0">
+    <channel>
+      <title>🪴 Quartz 4.0</title>
+      <link>https://quartz.jzhao.xyz</link>
+      <description>Recent content on 🪴 Quartz 4.0</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <atom:link href="https://quartz.jzhao.xyz/index.xml" rel="self" type="application/rss+xml"/>
+    </channel>
+    <items>
+    <title>Additional Docker-foo</title>
+    <link>https://quartz.jzhao.xyz/Additional-Docker-foo</link>
+    <guid>https://quartz.jzhao.xyz/Additional-Docker-foo</guid>
+    <description>Checking if your docker image is running § Once you have run your docker image, you can check whether it is running using docker ps in your terminal. The output lists containers, the container ID, image tag, and other information of the running docker containers.</description>
+    <pubDate>Wed, 23 Aug 2023 23:48:04 GMT</pubDate>
+  </items><items>
+    <title>Additional Reccomended Setup</title>
+    <link>https://quartz.jzhao.xyz/Additional-Reccomended-Setup</link>
+    <guid>https://quartz.jzhao.xyz/Additional-Reccomended-Setup</guid>
+    <description> Open a terminal, either in vscode (see: Using Visual Studio Code), or by running docker exec -it operating_systems bash. All commands in this part of the guide will use the terminal inside the container.</description>
+    <pubDate>Wed, 23 Aug 2023 23:48:04 GMT</pubDate>
+  </items><items>
+    <title>CSCI442 Student Environment</title>
+    <link>https://quartz.jzhao.xyz/CSCI442-Student-Environment</link>
+    <guid>https://quartz.jzhao.xyz/CSCI442-Student-Environment</guid>
+    <description>What is Docker § Docker is a tool that allows developers to easily deploy their applications in a sandbox (called containers) to run on the host operating system.</description>
+    <pubDate>Wed, 23 Aug 2023 23:48:04 GMT</pubDate>
+  </items><items>
+    <title>Setting Up The Docker Container</title>
+    <link>https://quartz.jzhao.xyz/Setting-Up-The-Docker-Container</link>
+    <guid>https://quartz.jzhao.xyz/Setting-Up-The-Docker-Container</guid>
+    <description>Download Docker Engine § First download and setup Docker Engine using the instructions at the link below for your OS: Windows: windows-install Mac: mac-install Linux: install Note: DO NOT install Docker Desktop for Linux, rather, select your Linux distribution on the left sidebar and follow the distribution specific instructions for Docker engine.</description>
+    <pubDate>Thu, 24 Aug 2023 00:00:01 GMT</pubDate>
+  </items><items>
+    <title>Using Visual Studio Code</title>
+    <link>https://quartz.jzhao.xyz/Using-Visual-Studio-Code</link>
+    <guid>https://quartz.jzhao.xyz/Using-Visual-Studio-Code</guid>
+    <description>If you prefer a graphical IDE, VSCode has excellent support for Docker. Prerequisites § You’ve followed the basic docker setup tutorial described above You’ve installed VSCode You’ve installed the “Remote Development” and “Docker” extensions within VSCode Connecting to Your Container § Navigate to the Docker menu (A whale with cubes on the left side of the window) Find csci442mines/student-env in the “Individual Containers” list.</description>
+    <pubDate>Wed, 23 Aug 2023 23:51:12 GMT</pubDate>
+  </items><items>
+    <title>debugger_controls.png</title>
+    <link>https://quartz.jzhao.xyz/images/debugger_controls.png</link>
+    <guid>https://quartz.jzhao.xyz/images/debugger_controls.png</guid>
+    <description></description>
+    <pubDate>Wed, 23 Aug 2023 23:50:16 GMT</pubDate>
+  </items>
+  </rss>
