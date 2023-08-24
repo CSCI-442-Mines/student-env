@@ -1,4 +1,4 @@
-### Checking if your docker image is running
+### Checking if your docker container is running
 Once you have run your docker image, you can check whether it is running using `docker ps` in your terminal. The output lists containers, the container ID, image tag, and other information of the running docker containers.
 After running the CSCI 442 docker you should see the following output:
 ```

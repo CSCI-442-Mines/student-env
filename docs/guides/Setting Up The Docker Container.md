@@ -1,4 +1,9 @@
-### Download Docker Engine
+### Create your directory to store your projects in
+We recommend creating a directory on your computer called `OS_Projects`, in which your projects will be synced with your Docker container. We recommend you place the folder in the following paths, depending on your operating system, for consistency.
+* Windows:  under `Documents`, or `C:\Users\<username>\Documents\OS_Projects\`.
+* MacOS and Linux: under your home directory: `/home/<username>/OS_Projects`.
+
+### Download Docker
 First download and setup Docker Engine using the instructions at the link below for your OS:
 - Windows: https://docs.docker.com/desktop/install/windows-install/
 - Mac: https://docs.docker.com/desktop/install/mac-install/
@@ -7,15 +12,17 @@ First download and setup Docker Engine using the instructions at the link below 
     - Remember to follow the post-installation steps for Linux: https://docs.docker.com/engine/install/linux-postinstall/
     - For Linux specific issues with Docker, feel free to email TA Luke Beukelman (lukebeukelman@mines.edu).
 
-
-TODO: Explain how to open a terminal for windows /linux mac.
-
-Open a new terminal on your computer and verify that your docker installation is working by running the following command:
+Open a new terminal on your computer. You should have used your computer's terminal in prior courses, but to ensure consistency:
+* Windows: use cmd, aka Command Prompt
+* MacOS: use terminal
+* Linux: depends on specific distribution, you should know what your terminal is if you are using Linux :).
+* 
+Verify that your docker installation is working by running the following command:
 ```
 $ docker run hello-world
 ```
 
-If you docker installation is working you should get the following output:
+If your docker installation is working you should get the following output:
 ```
 Hello from Docker.
 This message shows that your installation appears to be working correctly.
@@ -44,24 +51,35 @@ Now that you have the Docker image pulled, you can now create the container that
 
 The [docker run](https://docs.docker.com/engine/reference/commandline/run/) family of commands helps in the creation of creating docker containers. Most of the initial settings for the docker container are set in this step, and can not be changed afterwards.
 
-TODO: below, create two or three version (Windows/linux/mac). Replace the "source" value below with a folder named OS_projects. To be consistent we could also use OS_projects in the mapped folder insde container.
-
 The command you will run in is as follows:
 ```
-$ docker run -d --name operating_systems  --mount type=bind,source=<path to where you want to store csci442 files on your local computer>,target=/root/projects csci442mines/student-env
+$ docker run -d --name operating_systems  --mount type=bind,source=<local sync path>,target=/root/projects csci442mines/student-env
 ```
 
-TODO: You will use "docker run" command only once in the entire semester, unless you delete the container.
+If you followed our guidance on the location for your local sync path, it should look like this for Windows:
+```
+$ docker run -d --name operating_systems  --mount type=bind,source=C:\Users\<username>\Documents\OS_Projects\,target=/root/projects csci442mines/student-env
+```
+
+Or like this for MacOS/Linux:
+```
+$ docker run -d --name operating_systems  --mount type=bind,source=/home/<username>/OS_Projects,target=/root/projects csci442mines/student-env
+```
+
 
 To break down the command:
 * `docker run` is the command and sub-command to run a new docker image.
-*  `-d` runs the container in detached mode, as opposed to running it in the foreground, making it so your terminal will not wait for the docker container to shut down. TODO: What happens when their battery runs out?
+*  `-d` runs the container in detached mode, as opposed to running it in the foreground, making it so your terminal will not wait for the docker container to shut down.
 * `--mount type=bind,source=<path to where you want to store csci442 files on your local computer>,target=/root/projects` creates a bind mount, which makes it so that the changes in your Docker container are preserved on your computer, outside of the container. This makes it harder to lose your work!
-    * TODO: on your local computer the project files will be sync'ed into a folder named "OS_projects" under your home directory.
-    * TODO: Inside the container your project files will be under /root/projects
-* `csci442mines/student-env` is the name of the image that you are creating a container from.
+	* Inside the container, your project files will be under `/root/projects`.
+	* On your local computer the project files will be sync'ed into a folder named `OS_Projects`, wherever you created it in accordance with our guidance in [[Setting Up The Docker Container#Create your directory to store your projects in]].
 
-**We do not recommend deleting your Docker container.  This will delete everything inside of it, except for what is saved in the bind mount. However, if you accidentally do, follow this part of the guide again.**
+* `csci442mines/student-env` is the name of the image that you are creating a container from.
+* 
+**Note: You will use "docker run" command only once in the entire semester, unless you delete the container.**
+
+**Note: We do not recommend deleting your Docker container (see: [[Avoiding Data Loss and Other Important Notes#Do not delete your Docker container!!!!!]]).  This will delete everything inside of it, except for what is saved in the bind mount. However, if you accidentally do, follow this part of the guide again.**
+
 ### Sequential Container Runs
 Every time you shut down your computer, or simply shut down the Docker container, you will need to start it back up again to use it. In some applications, it is useful to just re-create the Docker container every time you need it, but that would lead to file changes (except for bind mounts) not being saved (not ideal for coding!).
 

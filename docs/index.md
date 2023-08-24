@@ -17,9 +17,12 @@ We are using docker to allow you to setup an isolated Linux environment with all
 
 ### Guides
 1. [[Setting Up The Docker Container]]
-2. [[Using Visual Studio Code]]
-3. [[Additional Docker-foo]]
+2. [[Setting Up Your Projects Inside the Docker Container]]
 
+#### References
+* [[Avoiding Data Loss and Other Important Notes]] (Mandatory and extremely important)
+* [[Using Visual Studio Code]] (Very highly recommended)
+* [[Additional Docker-foo]]
 
 
 

@@ -1,14 +1,19 @@
 If you prefer a graphical IDE, [VSCode](https://code.visualstudio.com/) has excellent support for Docker. 
 
+### Setup
+
 #### Prerequisites
-- You've followed the basic docker setup tutorial described above
+- You've followed the first step for setup, [[Setting Up The Docker Container]].
 - You've [installed VSCode](https://code.visualstudio.com/)
 - You've installed the "Remote Development" and "Docker" extensions within VSCode
+	- Extensions can be found under the tab that looks like this:
+	  ![[Pasted image 20230823220337.png]]
 #### Connecting to Your Container
 1. Navigate to the Docker menu (A whale with cubes on the left side of the window)
 2. Find `csci442mines/student-env` in the "Individual Containers" list. It should be in the "Containers" section at the top of the pane.
 3. Right-click on `csci442mines/student-env` and select "Attach Visual Studio Code" (if you don't see that option, press "Start" in the right-click menu and try again)
 4. You are now connected to the container and can use VSCode as normal. If you followed the docker setup instructions, your cloned repository should be in `/root/projects`.
+
 ### Debugging
 VSCode allows you to graphically debug C and C++. Start by installing the "C/C++" extension. This extension will give you autocomplete and better syntax highlighting in addition to debugging capabilities. The debugger takes information about how to run your project from the file `.vscode/launch.json`.
 #### Example Debugger Configuration
