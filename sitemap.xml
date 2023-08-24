@@ -1,22 +1,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://quartz.jzhao.xyz/</loc>
+    <loc>https://csci-442-mines.github.io/student-env//</loc>
     <lastmod>2023-08-24T13:00:10.459Z</lastmod>
   </url><url>
-    <loc>https://quartz.jzhao.xyz/guides/Setting-Up-The-Docker-Container</loc>
+    <loc>https://csci-442-mines.github.io/student-env//guides/Setting-Up-The-Docker-Container</loc>
     <lastmod>2023-08-24T05:20:30.253Z</lastmod>
   </url><url>
-    <loc>https://quartz.jzhao.xyz/guides/Setting-Up-Your-Projects-Inside-the-Docker-Container</loc>
+    <loc>https://csci-442-mines.github.io/student-env//guides/Setting-Up-Your-Projects-Inside-the-Docker-Container</loc>
     <lastmod>2023-08-24T04:39:57.274Z</lastmod>
   </url><url>
-    <loc>https://quartz.jzhao.xyz/references/Additional-Docker-foo</loc>
+    <loc>https://csci-442-mines.github.io/student-env//references/Additional-Docker-foo</loc>
     <lastmod>2023-08-24T13:19:57.456Z</lastmod>
   </url><url>
-    <loc>https://quartz.jzhao.xyz/references/Avoiding-Data-Loss-and-Other-Important-Notes</loc>
+    <loc>https://csci-442-mines.github.io/student-env//references/Avoiding-Data-Loss-and-Other-Important-Notes</loc>
     <lastmod>2023-08-24T04:49:40.726Z</lastmod>
   </url><url>
-    <loc>https://quartz.jzhao.xyz/references/Opening-a-Docker-Container's-Terminal</loc>
+    <loc>https://csci-442-mines.github.io/student-env//references/Opening-a-Docker-Container's-Terminal</loc>
     <lastmod>2023-08-24T04:23:40.738Z</lastmod>
   </url><url>
-    <loc>https://quartz.jzhao.xyz/references/Using-Visual-Studio-Code</loc>
+    <loc>https://csci-442-mines.github.io/student-env//references/Using-Visual-Studio-Code</loc>
     <lastmod>2023-08-24T04:09:08.152Z</lastmod>
   </url></urlset>
