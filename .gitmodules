@@ -1,0 +1,3 @@
+[submodule "student-env"]
+	path = student-env
+	url = git@github.com:CSCI-442-Mines/student-env.git
