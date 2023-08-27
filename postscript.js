@@ -1118,6 +1118,7 @@ document.addEventListener("nav", async (e) => {
     button.addEventListener("click", () => {
       const targ = resolveRelative(currentSlug, slug2);
       window.spaNavigate(new URL(targ, window.location.toString()));
+      hideSearch();
     });
     return button;
   };
