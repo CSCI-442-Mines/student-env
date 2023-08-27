@@ -53,7 +53,7 @@ Now that you have the Docker image pulled, you can now create the container that
 
 The [docker run](https://docs.docker.com/engine/reference/commandline/run/) family of commands helps in the creation of creating docker containers. Most of the initial settings for the docker container are set in this step, and can not be changed afterwards.
 
-The command you will run in is as follows:
+The template of the command you will run in is as follows (do not run this command as it, "local sync path" needs to be filled in. Exact commands for Windows/MacOS/Linux are below):
 ```
 $ docker run -d --name operating_systems  --mount type=bind,source=<local sync path>,target=/root/projects csci442mines/student-env
 ```
