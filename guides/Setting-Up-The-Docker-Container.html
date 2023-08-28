@@ -55,8 +55,9 @@ csci442mines/student-env   latest    84f85651e5f1   20 hours ago   1.71GB
 <pre><code>$ cd %HomePath%
 $ docker run -d --name operating_systems  --mount type=bind,source=&quot;%cd%\OS_projects&quot;,target=/root/projects csci442mines/student-env
 </code></pre>
-<p>Or like this for MacOS/Linux:</p>
-<pre><code>$ docker run -d --name operating_systems  --mount type=bind,source=/home/&lt;username>/OS_Projects,target=/root/projects csci442mines/student-env
+<p>Or like this for Linux and MacOS:</p>
+<pre><code>$ mkdir $HOME/OS_projects
+$ docker run -d --name operating_systems  --mount type=bind,source=$HOME/OS_Projects,target=/root/projects csci442mines/student-env
 </code></pre>
 <p>To break down the command:</p>
 <ul>
