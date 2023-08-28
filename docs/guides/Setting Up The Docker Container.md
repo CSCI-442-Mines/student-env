@@ -64,11 +64,11 @@ $ cd %HomePath%
 $ docker run -d --name operating_systems  --mount type=bind,source="%cd%\OS_projects",target=/root/projects csci442mines/student-env
 ```
 
-Or like this for MacOS/Linux:
+Or like this for Linux and MacOS:
 ```
-$ docker run -d --name operating_systems  --mount type=bind,source=/home/<username>/OS_Projects,target=/root/projects csci442mines/student-env
+$ mkdir $HOME/OS_projects
+$ docker run -d --name operating_systems  --mount type=bind,source=$HOME/OS_Projects,target=/root/projects csci442mines/student-env
 ```
-
 
 To break down the command:
 * `docker run` is the command and sub-command to run a new docker image.
