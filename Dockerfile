@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM mcr.microsoft.com/devcontainers/base:ubuntu
 LABEL maintainer="lbeuk@pm.me"
 
 # Dependencies for git
