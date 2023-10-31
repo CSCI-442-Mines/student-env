@@ -3,7 +3,7 @@ If you prefer a graphical IDE, [VSCode](https://code.visualstudio.com/) has exce
 ### Setup
 
 #### Prerequisites
-- You've followed the first step for setup, [[Setting Up The Docker Container]].
+- You've followed the first step for setup, [[Installing Docker]].
 - You've [installed VSCode](https://code.visualstudio.com/)
 - You've installed the "Remote Development" and "Docker" extensions within VSCode
 	- Extensions can be found under the tab that looks like this:
