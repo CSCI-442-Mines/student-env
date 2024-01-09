@@ -8,10 +8,10 @@ Docker is a tool that allows developers to easily deploy their applications in a
 ## What are containers?
 Containers are used to run software as an alternative to virtual machine. Containers offer a logical packaging mechanism in which applications can be abstracted from the environment in which they actually run. This decoupling allows container-based applications to be deployed easily and consistently. Containers provide most of the isolation of virtual machines at a fraction of the computing power.
 
-### What are images
+### What are images?
 The blueprints of our application which form the basis of containers.
 
-## How is CSCI 442 using Docker and containers
+## How is CSCI 442 using Docker and containers?
 We are using docker to allow you to setup an isolated Linux environment with all the necessary packages for CSCI 442 projects. This will allow you to run your CSCI 442 code in a Linux environment regardless of your computer's OS. We will give you a docker image which sets up an environment identical to the autograder which ensures that your code will run inside this docker with the same result output as on the autograder. See below for steps to set up the CSCI 442 docker.
 
 ## What are dev containers?
