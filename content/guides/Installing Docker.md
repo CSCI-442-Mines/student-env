@@ -1,5 +1,3 @@
-
-
 ### Download Docker
 For Windows and Mac, you will download Docker Desktop. For Linux, you will download Docker Engine. This is for historical reasons regarding the workarounds that were needed to port Docker to Mac and Windows.
 
