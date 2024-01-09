@@ -9,7 +9,7 @@ It is highly likely that you have already downloaded this extension pack at some
 - [Remote - Tunnels](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server) - Worth exploration on it's own, similar to SSH, except it doesn't need an open port accessible from the web. You simply need to enable tunnels in VSCode on a device you want to tunnel into, sign into GitHub on both the accessed and the accessing machine's VSCode, and you are able to access the device from anywhere without port forwarding or SSH.
 
 ## Create the Dev Container Configuration File
-Inside your OS project directory (we told you to use OS_Projects, but you can name it whatever), we need to create the necessary directory structure. We have provided all of the files you need on the [student-env repository](https://github.com/CSCI-442-Mines/student-env). Download the `container_conf.zip` file, and unzip it into your project directory, so that the `.devcontainer` folder, which contains the `devcontainer.json` and `Dockerfile` files, is inside the root of your projects directory.
+Inside your OS project directory (we recommend you to use OS_Projects, but you can name it whatever), we need to create the necessary directory structure. We have provided all of the files you need on the [student-env repository](https://github.com/CSCI-442-Mines/student-env). Download the [`container_conf.zip`]() file, and unzip it into your project directory, so that the `.devcontainer` folder, which contains the `devcontainer.json` and `Dockerfile` files, is inside the root of your projects directory.
 
 This is an example of what the directory looks like for our VSCode editing this documentation repository:
 
