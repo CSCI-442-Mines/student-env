@@ -16,7 +16,7 @@ We are using docker to allow you to setup an isolated Linux environment with all
 ## What are dev containers?
 Dev containers are a feature provided by Visual Studio Code that make creating containers to develop your code in very convenient. Dev containers offer the following advantages over configuring your own Docker container:
 #### Dev Container Advantage 1: Easy integration with VSCode
-While it is still easy to connect to a container with VSCode (a feature of the dev containers extension), using dev containers as we are in this course makes it even easier. All you have to do is open VSCode into a directory with a dev container config, and the 
+While it is still easy to connect to a container with VSCode (a feature of the dev containers extension), using dev containers as we are in this course makes it even easier. All you have to do is open VSCode into a directory with a dev container config, and vscode will automatically ask you if you would like to open the associated container.
 #### Dev Container Advantage 2: Automatic bind mounts
 Bind mounts make it so that your Docker container has access to a folder on your host machine. To the Docker container, a bind mount looks like a normal folder, except for that the contents of the folder are automatically and immediately synced between your host and the Docker container.
 

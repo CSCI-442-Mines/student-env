@@ -13,7 +13,7 @@ Open a new terminal on your computer. You should have used your computer's termi
 * Windows: use cmd, aka Command Prompt
 * MacOS: use terminal
 * Linux: depends on specific distribution, you should know what your terminal is if you are using Linux :).
-* 
+
 Verify that your docker installation is working by running the following command:
 ```
 $ docker run hello-world
