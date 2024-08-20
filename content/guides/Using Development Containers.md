@@ -15,8 +15,32 @@ This is an example of what the directory looks like for our VSCode editing this 
 
 ![[directory_structure.png]]
 
-Our project root directory is student-end (capitalized as STUDENT-ENV), and at the top, in the root directory of the project (right under student-env/) is the `.devcontainer` directory.
+Our project root directory is student-env (capitalized as STUDENT-ENV), and at the top, in the root directory of the project (right under student-env/) is the `.devcontainer` directory.
 ## Pedal to the Metal, Let's Start Operating Some Systems!
 Whenever you open up your project directory, a VSCode dialogue should show up asking you if you would like to open the directory in a container. Click `Reopen in Container`. For the first time, it may take a minute to build the container, but subsequent opens should be much faster.
 
 ![[Screenshot from 2023-10-24 16-12-55.png]]
+## One time  GitHub key setup - Must be done within the container
+1. Follow [GitHub's guide for setting up SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux), make sure to use the Linux tab. Follow the sections under "Generating a new SSH key" and "Adding your SSH key to the ssh-agent".
+2.  Make sure to follow the guide for [adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) if you haven't already.
+	* Note: to print your public key (note: do not print or copy your private key... EVER!), you can run: `cat ~/.ssh/id_rsa.pub`;
+	* For example (throwaway, good luck using this key for anything).
+		![[Pasted image 20230823222945.png]]
+
+
+## Per-project Setup
+1. Create a github project instance by clicking on the github classroom invitation in the canvas assignment 
+2. Clone project starter files into your container
+	```
+	$ cd /root/projects; git clone git@github.com:CSCI-442-Mines/f23-project-1-<username>.git
+	```
+
+## Developing your code
+1. After cloning the project, your project files will be under `/root/projects/f23-project-1-<username>.git`.
+2. Compile your code by running `$ make`.
+3. Run the binary that is specific to the project (for project 1 it is `./reverse`).
+4. Implement the project via your favorite editor.
+5. At the end of any programming session, or whenever you make any progress you want to save (feature complete, partially implemented, or you just don't want to lose work), run `git commit -a && git push` in order to save your changes to you git repository. 
+	* We STRONGLY recommend doing this frequently, so you do not lose your work.
+	* It happens every semester where someone forgets to commit some major work and loses several hours of work, you don't want to be that person.
+6. Take your screenshot to upload to deliverable 1 once the D1 requirements are complete.

@@ -1,7 +1,7 @@
 Before following this guide, you need access to your Docker container's terminal in order to run these commands. The reference guide, [[Opening a Docker Container's Terminal]] will help with this.
 
 
-## One time  GitHub key setup
+## One time  GitHub key setup - Must be done within the container
 1. Follow [GitHub's guide for setting up SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux), make sure to use the Linux tab. Follow the sections under "Generating a new SSH key" and "Adding your SSH key to the ssh-agent".
 2.  Make sure to follow the guide for [adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) if you haven't already.
 	* Note: to print your public key (note: do not print or copy your private key... EVER!), you can run: `cat ~/.ssh/id_rsa.pub`;
