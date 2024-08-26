@@ -13,11 +13,11 @@ Before following this guide, you need access to your Docker container's terminal
 1. Create a github project instance by clicking on the github classroom invitation in the canvas assignment 
 2. Clone project starter files into your container
 	```
-	$ cd /root/projects; git clone git@github.com:CSCI-442-Mines/f23-project-1-<username>.git
+	$ cd /root/projects; git clone git@github.com:CSCI-442-Mines/f24-project-1-<username>.git
 	```
 
 ## Developing your code
-1. After cloning the project, your project files will be under `/root/projects/f23-project-1-<username>.git`.
+1. After cloning the project, your project files will be under `/root/projects/f24-project-1-<username>.git`.
 2. Compile your code by running `$ make`.
 3. Run the binary that is specific to the project (for project 1 it is `./reverse`).
 4. Implement the project via your favorite editor.
