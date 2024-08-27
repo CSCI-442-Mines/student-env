@@ -1,4 +1,4 @@
-Before following this guide, you need access to your Docker container's terminal in order to run these commands. The reference guide, [[Opening a Docker Container's Terminal]] will help with this.
+Before following this guide, you need access to your Docker container's terminal in order to run these commands.
 
 
 ## One time  GitHub key setup - Must be done within the container
