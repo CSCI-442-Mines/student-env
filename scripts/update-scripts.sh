@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Fix line endings
+# Update the scripts in the scripts directory to the latest version
 
 ################################################################################
 #                                  Internals                                   #
