@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Update the scripts in the scripts directory to the latest version
+# Downloads the latest version of the script
 
 ################################################################################
 #                                  Internals                                   #
@@ -15,26 +15,20 @@ SCRIPT_DIR="$(dirname "$(readlink -f "${0}")")"
 # Common preflight checks
 preflight_checks skip-check-for-update
 
-# Check that the latest version is not the same as the current version
-if [ "${LATEST_VERSION}" == "${CURRENT_VERSION}" ]; then
-  echo -e "${ERROR} The latest version of the script is the same as the current version (${CURRENT_VERSION})."
+# Check that we should update the script
+if ! semver_gt "${LATEST_VERSION}" "${CURRENT_VERSION}" || [ "${LATEST_VERSION}" == "${CURRENT_VERSION}" ]; then
+  echo -e "${ERROR} The current version is already up to date."
   exit 1
 fi
 
-# Get the latest release zipball URL
-LATEST_ZIPBALL_URL=$(curl -sS "${LATEST_URL}" | jq -r .zipball_url)
-
 # Download the latest release zipball
-curl -sSL "${LATEST_ZIPBALL_URL}" -o /tmp/latest.zip
+curl -sSL "https://github.com/${REPOSITORY}/releases/latest/download/student-env.zip" -o /tmp/latest.zip
 
 # Extract the latest release zipball
 unzip -qo /tmp/latest.zip -d /tmp/latest
 
-# Move the latest release files to the scripts directory
-mv /tmp/latest/*/* "${SCRIPT_DIR}/.."
-
-# Clean up
-rm -rf /tmp/latest /tmp/latest.zip
+# Run the new release's apply-update script
+/tmp/latest/*/*/scripts/apply-update.sh "${CURRENT_VERSION}" "${SCRIPT_DIR}"
 
 # Print success message
 echo -e "${SUCCESS} Updated from ${CURRENT_VERSION} to ${LATEST_VERSION}."

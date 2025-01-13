@@ -8,10 +8,12 @@ WORKDIR /workspace
 RUN DEBIAN_FRONTEND="noninteractive" apt update && apt upgrade -y && apt install -y \
   build-essential \
   clang \
+  dos2unix \
   emacs \
   gdb \
   git \
   libboost-all-dev \
+  libfmt-dev\
   libreadline-dev \
   nano \
   neovim \

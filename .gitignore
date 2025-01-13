@@ -1,0 +1,5 @@
+# ZIP files
+*.zip
+
+# Projects
+/*-project-*/

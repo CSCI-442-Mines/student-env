@@ -1,5 +1,7 @@
 # CSCI442: Student Environment
 
+[![release.yml](https://github.com/CSCI-442-Mines/CSCI-442-Mines.github.io/actions/workflows/release.yml/badge.svg)](https://github.com/CSCI-442-Mines/CSCI-442-Mines.github.io/actions/workflows/release.yml)
+
 This is the student environment for CSCI442: Operating Systems at the
 [Colorado School of Mines](https://mines.edu). If you are a student, please go to the
 [course website](https://csci-442-mines.github.io/student-environment) for instructions on how to
@@ -11,9 +13,6 @@ set up your environment. The project structure is as follows:
     modify this directory.
   - `scripts/`: This directory contains miscellaneous scripts for the course. A course staff member
     will provide instructions on how to use these utilities, if necessary.
-    - `fix-line-endings.sh`: This script will fix line endings in your project files (i.e., if you
-      accidentally opened your project in a Windows text editor).
-    - `update-scripts.sh`: This script will update the scripts in this directory to the latest version.
   - `README.md`: This is the file you are currently reading. This file contains helpful reminders
     and instructions for using the dev container.
   - `SEMESTER-project-1-USERNAME/`: This is your personal project 1 repository, where `SEMESTER` is
