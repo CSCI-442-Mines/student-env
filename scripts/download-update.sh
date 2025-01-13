@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Downloads the latest version of the script
+# Downloads the latest version of the dev container utilities. This does not update the dev
+# container itself however. To update the dev container, you must rebuild it.
 
 ################################################################################
 #                                  Internals                                   #
@@ -25,10 +26,8 @@ fi
 curl -sSL "https://github.com/${REPOSITORY}/releases/latest/download/student-env.zip" -o /tmp/latest.zip
 
 # Extract the latest release zipball
+rm -rf /tmp/latest
 unzip -qo /tmp/latest.zip -d /tmp/latest
 
 # Run the new release's apply-update script
-/tmp/latest/*/*/scripts/apply-update.sh "${CURRENT_VERSION}" "${SCRIPT_DIR}"
-
-# Print success message
-echo -e "${SUCCESS} Updated from ${CURRENT_VERSION} to ${LATEST_VERSION}."
+/tmp/latest/scripts/apply-update.sh "${CURRENT_VERSION}" "${ROOT_DIR}"

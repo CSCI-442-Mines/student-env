@@ -19,14 +19,14 @@ SUCCESS="${GREEN}[SUCCESS]${RESET}"
 WARNING="${YELLOW}[WARNING]${RESET}"
 ERROR="${RED}[ERROR]${RESET}"
 
-# Get the directory of the script
-SCRIPT_DIR="$(dirname "$(readlink -f "${0}")")"
+# Get the root directory of the dev container assets
+ROOT_DIR="$(dirname "$(dirname "$(readlink -f "${0}")")")"
 
 # The repository path on GitHub
 REPOSITORY="csci-442-mines/student-env"
 
 # Current release version
-CURRENT_VERSION="v0.0.0-alpha.0"
+CURRENT_VERSION="v1.0.0"
 
 # Latest release API URL
 LATEST_URL="https://api.github.com/repos/${REPOSITORY}/releases/latest"
@@ -71,8 +71,8 @@ function semver_range {
 # Returns:
 #   None
 function preflight_checks {
-  # Check if the script directory is the workspace directory
-  if [ "${SCRIPT_DIR}" != "/workspace/scripts" ]; then
+  # Check if the root directory is the workspace directory
+  if [ "${ROOT_DIR}" != "/workspace" ]; then
       echo -e "${ERROR} This script appears to be in the wrong directory. This indicates that your student environment is misconfigured/corrupted. Please contact course staff for assistance."
       exit 1
   fi

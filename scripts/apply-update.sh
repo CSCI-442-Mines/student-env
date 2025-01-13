@@ -21,7 +21,7 @@ fi
 
 # Extract arguments
 PREVIOUS_VERSION="${1}"
-PREVIOUS_SCRIPT_DIR="${2}"
+PREVIOUS_ROOT_DIR="${2}"
 
 # Check if the previous version is empty
 if [ -z "${PREVIOUS_VERSION}" ]; then
@@ -30,20 +30,20 @@ if [ -z "${PREVIOUS_VERSION}" ]; then
 fi
 
 # Check if the previous script directory is a directory
-if [ ! -d "${PREVIOUS_SCRIPT_DIR}" ]; then
+if [ ! -d "${PREVIOUS_ROOT_DIR}" ]; then
   echo -e "${ERROR} The previous script directory is not a directory!"
   exit 1
 fi
 
 # Version-specific update logic
 if semver_range "v0.0.0-alpha.0" "${PREVIOUS_VERSION}" "v1.0.0"; then
-  # Move the current release files to the previous directory
-  mv --backup=simple "${SCRIPT_DIR}/.." "${PREVIOUS_SCRIPT_DIR}/../"
-
-  # Clean up
-  rm -rf "${SCRIPT_DIR}/.."
+  # Copy the new scripts
+  rsync --backup --checksum --recursive ${ROOT_DIR}/{*,.*} "${PREVIOUS_ROOT_DIR}"
 else
   # Unknown version
   echo -e "${ERROR} Unknown previous version: ${PREVIOUS_VERSION}!"
   exit 1
 fi
+
+# Print success message
+echo -e "${SUCCESS} Updated from ${PREVIOUS_VERSION} to ${CURRENT_VERSION}."
