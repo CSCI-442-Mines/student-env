@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      font-family: sans-serif;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .text {
+      max-width: 512px;
+      text-align: justify;
+    }
+
+    #countdown {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="text">This site has moved from https://csci-442-mines.github.io/student-env to
+    https://csci-442-mines.github.io/student-environment. Please update your bookmarks. You will be redirected in <span
+      id="countdown">10</span> seconds or you can click <a href="https://csci-442-mines.github.io/student-environment">here</a>.
+  </p>
+
+  <script>
+    const countdown = document.getElementById("countdown");
+
+    let remaining = 10;
+
+    setInterval(() => {
+      remaining -= 1;
+      countdown.textContent = remaining;
+
+      if (remaining === 0) {
+        window.location.replace("https://csci-442-mines.github.io/student-environment");
+      }
+    }, 1000);
+  </script>
+</body>
+
+</html>
