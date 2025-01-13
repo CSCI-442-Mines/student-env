@@ -26,7 +26,7 @@ ROOT_DIR="$(dirname "$(dirname "$(readlink -f "${0}")")")"
 REPOSITORY="csci-442-mines/student-env"
 
 # Current release version
-CURRENT_VERSION="v1.0.0"
+CURRENT_VERSION="v1.0.1"
 
 # Latest release API URL
 LATEST_URL="https://api.github.com/repos/${REPOSITORY}/releases/latest"

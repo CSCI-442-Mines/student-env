@@ -1,6 +1,6 @@
 # CSCI442: Student Environment
 
-[![release.yml](https://github.com/CSCI-442-Mines/CSCI-442-Mines.github.io/actions/workflows/release.yml/badge.svg)](https://github.com/CSCI-442-Mines/CSCI-442-Mines.github.io/actions/workflows/release.yml)
+[![release.yml](https://github.com/CSCI-442-Mines/student-env/actions/workflows/release.yml/badge.svg)](https://github.com/CSCI-442-Mines/student-env/actions/workflows/release.yml)
 
 This is the student environment for CSCI442: Operating Systems at the
 [Colorado School of Mines](https://mines.edu). If you are a student, please go to the
