@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Clone code
@@ -23,8 +23,42 @@ jobs:
         run: |
           zip -r student-env.zip .devcontainer scripts README.md
 
-      - name: Create release
+      - name: Add the zip to the release
         uses: softprops/action-gh-release@v2
         if: github.event_name == 'push'
         with:
           files: student-env.zip
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Generate metadata
+        id: docker_metadata
+        uses: docker/metadata-action@v5
+        with:
+          flavor: latest=true
+          images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=ref,event=tag
+            type=sha
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .devcontainer
+          platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8
+          push: true
+          tags: ${{ steps.docker_metadata.outputs.tags }}
+          labels: ${{ steps.docker_metadata.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

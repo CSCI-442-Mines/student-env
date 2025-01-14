@@ -13,7 +13,7 @@ RUN DEBIAN_FRONTEND="noninteractive" apt update && apt upgrade -y && apt install
   gdb \
   git \
   libboost-all-dev \
-  libfmt-dev\
+  libfmt-dev \
   libreadline-dev \
   nano \
   neovim \

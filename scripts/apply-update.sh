@@ -36,7 +36,7 @@ if [ ! -d "${PREVIOUS_ROOT_DIR}" ]; then
 fi
 
 # Version-specific update logic
-if semver_range "v0.0.0-alpha.0" "${PREVIOUS_VERSION}" "v1.0.0"; then
+if semver_gt "v2.0.0" "${PREVIOUS_VERSION}"; then
   # Copy the new scripts
   rsync --backup --checksum --recursive ${ROOT_DIR}/{*,.*} "${PREVIOUS_ROOT_DIR}"
 else

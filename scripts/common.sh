@@ -26,7 +26,7 @@ ROOT_DIR="$(dirname "$(dirname "$(readlink -f "${0}")")")"
 REPOSITORY="csci-442-mines/student-env"
 
 # Current release version
-CURRENT_VERSION="v1.0.1"
+CURRENT_VERSION="v1.0.2"
 
 # Latest release API URL
 LATEST_URL="https://api.github.com/repos/${REPOSITORY}/releases/latest"
@@ -46,22 +46,6 @@ function semver_gt {
     return 1
   else
     return 0
-  fi
-}
-
-# Compare a semantic version to a range
-# Arguments:
-#   - $1: The minimum version
-#   - $2: The version to check
-#   - $3: The maximum version
-# Returns:
-#   - 0: If the version is within the range (inclusive)
-#   - 1: If the version is outside the range
-function semver_range {
-  if $(echo -e "$1\n$2\n$3" | sort -C -V); then
-    return 0
-  else
-    return 1
   fi
 }
 

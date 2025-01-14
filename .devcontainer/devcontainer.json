@@ -1,9 +1,15 @@
 {
   "name": "CSCI442",
+
+  // Use the prebuilt image (Mutually exclusive with "build"!):
+  // "image": "ghcr.io/csci-442-mines/student-env:latest",
+
+  // Build the image yourself (Mutually exclusive with "image"!):
   "build": {
     "dockerfile": "Dockerfile",
     "context": ".."
   },
+
   "customizations": {
     "vscode": {
       "extensions": [
