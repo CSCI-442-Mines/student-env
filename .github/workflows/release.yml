@@ -6,11 +6,10 @@ on:
     tags:
       - 'v*.*.*'
 
-  # Run when manually triggered
-  workflow_dispatch:
-
 permissions:
+  attestations: write
   contents: write
+  id-token: write
   packages: write
 
 jobs:
@@ -37,7 +36,7 @@ jobs:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
-      - name: Generate metadata
+      - name: Generate Docker metadata
         id: docker_metadata
         uses: docker/metadata-action@v5
         with:
@@ -54,7 +53,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push
+      - name: Build Docker image
+        id: build
         uses: docker/build-push-action@v6
         with:
           context: .devcontainer
@@ -64,3 +64,11 @@ jobs:
           labels: ${{ steps.docker_metadata.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+      - name: Attest and push Docker image
+        uses: actions/attest-build-provenance@v2
+        id: attest
+        with:
+          subject-name: ghcr.io/${{ github.repository }}
+          subject-digest: ${{ steps.build.outputs.digest }}
+          push-to-registry: true
