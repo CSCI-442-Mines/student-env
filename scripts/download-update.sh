@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Downloads the latest version of the dev container utilities. This does not update the dev
 # container itself however. To update the dev container, you must rebuild it.

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Apply the update. This script is automatically invoked by download-update.sh. Do not run this
 # script manually!

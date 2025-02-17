@@ -1,10 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Common functions and variables for scripts
 
 ################################################################################
 #                                  Internals                                   #
 ################################################################################
+
+# Exit on undefined variables and pipe failures
+set -uo pipefail
 
 # ANSI color codes
 GRAY="\033[0;37m"
@@ -26,7 +29,7 @@ ROOT_DIR="$(dirname "$(dirname "$(readlink -f "${0}")")")"
 REPOSITORY="csci-442-mines/student-env"
 
 # Current release version
-CURRENT_VERSION="v1.0.2"
+CURRENT_VERSION="v1.0.3"
 
 # Latest release API URL
 LATEST_URL="https://api.github.com/repos/${REPOSITORY}/releases/latest"
